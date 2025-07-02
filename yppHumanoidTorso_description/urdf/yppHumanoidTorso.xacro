@@ -1,0 +1,196 @@
+<?xml version="1.0" ?>
+<robot name="yppHumanoidTorso" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find yppHumanoidTorso_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find yppHumanoidTorso_description)/urdf/yppHumanoidTorso.trans" />
+<xacro:include filename="$(find yppHumanoidTorso_description)/urdf/yppHumanoidTorso.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.02820438898458755 0.012240736748841826 0.16730475756120552" rpy="0 0 0"/>
+    <mass value="5.928959250861792"/>
+    <inertia ixx="0.121231" iyy="0.072862" izz="0.096271" ixy="-4.5e-05" iyz="-0.000157" ixz="-0.008862"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find yppHumanoidTorso_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find yppHumanoidTorso_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rightShoulderFrame_1">
+  <inertial>
+    <origin xyz="8.380005658836787e-08 0.0017710389514342673 -0.015751528341931664" rpy="0 0 0"/>
+    <mass value="0.13135357929092184"/>
+    <inertia ixx="0.000103" iyy="4e-05" izz="8.5e-05" ixy="-0.0" iyz="7e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.03839 0.167618 -0.195644" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find yppHumanoidTorso_description)/meshes/rightShoulderFrame_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.03839 0.167618 -0.195644" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find yppHumanoidTorso_description)/meshes/rightShoulderFrame_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leftShoulderFrame_1">
+  <inertial>
+    <origin xyz="1.2174885972854321e-06 -0.0017709868420040797 -0.015751528377942997" rpy="0 0 0"/>
+    <mass value="0.13135357929386152"/>
+    <inertia ixx="0.000103" iyy="4e-05" izz="8.5e-05" ixy="0.0" iyz="-7e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.03839 -0.191736 -0.195644" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find yppHumanoidTorso_description)/meshes/leftShoulderFrame_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.03839 -0.191736 -0.195644" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find yppHumanoidTorso_description)/meshes/leftShoulderFrame_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rightMiddleArm_1">
+  <inertial>
+    <origin xyz="-0.008086808173031281 0.025629060618776206 -0.0848370591230877" rpy="0 0 0"/>
+    <mass value="1.4331785138748847"/>
+    <inertia ixx="0.011474" iyy="0.011582" izz="0.000655" ixy="8e-06" iyz="-6e-06" ixz="0.000968"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.03839 0.193378 -0.157652" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find yppHumanoidTorso_description)/meshes/rightMiddleArm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.03839 0.193378 -0.157652" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find yppHumanoidTorso_description)/meshes/rightMiddleArm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leftMiddleArm_1">
+  <inertial>
+    <origin xyz="-0.008070894013655173 -0.025634186487987293 -0.08483704558529576" rpy="0 0 0"/>
+    <mass value="1.4331784400520409"/>
+    <inertia ixx="0.011474" iyy="0.011582" izz="0.000655" ixy="-8e-06" iyz="6e-06" ixz="0.000968"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.038374 -0.217496 -0.157652" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find yppHumanoidTorso_description)/meshes/leftMiddleArm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.038374 -0.217496 -0.157652" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find yppHumanoidTorso_description)/meshes/leftMiddleArm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leftEndEffector_1">
+  <inertial>
+    <origin xyz="1.535562154979242e-05 -0.023475584475403877 -0.15027082061255212" rpy="0 0 0"/>
+    <mass value="1.0396008129042877"/>
+    <inertia ixx="0.002948" iyy="0.004118" izz="0.001772" ixy="-1e-06" iyz="3.4e-05" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.038375 -0.214996 0.042348" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find yppHumanoidTorso_description)/meshes/leftEndEffector_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.038375 -0.214996 0.042348" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find yppHumanoidTorso_description)/meshes/leftEndEffector_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rightEndEffector_1">
+  <inertial>
+    <origin xyz="3.192840416776921e-07 0.023475636337958627 -0.15027082055721397" rpy="0 0 0"/>
+    <mass value="1.0396008129998504"/>
+    <inertia ixx="0.002948" iyy="0.004118" izz="0.001772" ixy="0.0" iyz="-3.4e-05" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.03839 0.190878 0.042348" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find yppHumanoidTorso_description)/meshes/rightEndEffector_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.03839 0.190878 0.042348" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find yppHumanoidTorso_description)/meshes/rightEndEffector_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="rotate_1" type="continuous">
+  <origin xyz="0.03839 -0.167618 0.195644" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="rightShoulderFrame_1"/>
+  <axis xyz="-0.0 -0.0 -1.0"/>
+</joint>
+
+<joint name="rotate_0" type="continuous">
+  <origin xyz="0.03839 0.191736 0.195644" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="leftShoulderFrame_1"/>
+  <axis xyz="-0.0 -0.0 -1.0"/>
+</joint>
+
+<joint name="rotate_3" type="continuous">
+  <origin xyz="0.0 -0.02576 -0.037992" rpy="0 0 0"/>
+  <parent link="rightShoulderFrame_1"/>
+  <child link="rightMiddleArm_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="rotate_2" type="continuous">
+  <origin xyz="-1.6e-05 0.02576 -0.037992" rpy="0 0 0"/>
+  <parent link="leftShoulderFrame_1"/>
+  <child link="leftMiddleArm_1"/>
+  <axis xyz="-0.00064 1.0 -0.0"/>
+</joint>
+
+<joint name="rotate_4" type="continuous">
+  <origin xyz="1e-06 -0.0025 -0.2" rpy="0 0 0"/>
+  <parent link="leftMiddleArm_1"/>
+  <child link="leftEndEffector_1"/>
+  <axis xyz="-0.00064 1.0 -0.0"/>
+</joint>
+
+<joint name="rotate_5" type="continuous">
+  <origin xyz="0.0 0.0025 -0.2" rpy="0 0 0"/>
+  <parent link="rightMiddleArm_1"/>
+  <child link="rightEndEffector_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+</robot>
